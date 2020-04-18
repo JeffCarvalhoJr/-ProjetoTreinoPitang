@@ -14,25 +14,25 @@ namespace Pitang.Sms.Treino.Controller
     {
         [HttpGet]
         [Route("")]
-        public ActionResult<string> Get()
+        public ActionResult<string> Get(
+            [FromServices] DataContext context)
         {
-            var test = "hello get";
-            Console.WriteLine("Hello Get");
-            return Ok(test);
+            var users = context.Users;
+            Console.WriteLine("Hello Get");//Debug
+            return Ok(users);
         }
 
         [HttpPost]
         [Route("")]
         public async Task<ActionResult<UserModel>> Post(
             [FromServices] DataContext context, 
-            [FromBody] UserModel model)
+            [FromBody] UserModel userModel)
         {
-            var test = "Hello post";
-            context.Users.Add(model);
+
+            context.Users.Add(userModel);
             await context.SaveChangesAsync();
 
-            Console.WriteLine("Hello post");
-            return model;
+            return userModel;
         }
     }
 }

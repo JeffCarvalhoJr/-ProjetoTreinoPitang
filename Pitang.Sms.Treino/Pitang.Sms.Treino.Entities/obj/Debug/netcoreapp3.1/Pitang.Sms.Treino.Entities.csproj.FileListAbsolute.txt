@@ -7,3 +7,12 @@ C:\Users\Jefca\source\repos\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Deb
 C:\Users\Jefca\source\repos\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.AssemblyInfo.cs
 C:\Users\Jefca\source\repos\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.dll
 C:\Users\Jefca\source\repos\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.pdb
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.deps.json
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.pdb
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.csprojAssemblyReference.cache
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.AssemblyInfoInputs.cache
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.AssemblyInfo.cs
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Entities\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.pdb

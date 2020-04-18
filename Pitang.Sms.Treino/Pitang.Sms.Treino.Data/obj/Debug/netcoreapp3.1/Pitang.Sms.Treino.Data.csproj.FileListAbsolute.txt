@@ -10,3 +10,15 @@ C:\Users\Jefca\source\repos\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\n
 C:\Users\Jefca\source\repos\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.csproj.CopyComplete
 C:\Users\Jefca\source\repos\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.dll
 C:\Users\Jefca\source\repos\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.pdb
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.deps.json
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.pdb
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.pdb
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.csprojAssemblyReference.cache
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.csproj.CoreCompileInputs.cache
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.AssemblyInfoInputs.cache
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.AssemblyInfo.cs
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.csproj.CopyComplete
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino.Data\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.pdb

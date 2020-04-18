@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
@@ -13,6 +15,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Pitang.Sms.Treino.Data\Pitang.Sms.Treino.Data.csproj" />
     <ProjectReference Include="..\Pitang.Sms.Treino.Entities\Pitang.Sms.Treino.Entities.csproj" />
+    <ProjectReference Include="..\Pitang.Sms.Treino.Services\Pitang.Sms.Treino.Services.csproj" />
+    <ProjectReference Include="..\Pitang.Smsm.Treino.DTO\Pitang.Sms.Treino.DTO.csproj" />
   </ItemGroup>
 
 

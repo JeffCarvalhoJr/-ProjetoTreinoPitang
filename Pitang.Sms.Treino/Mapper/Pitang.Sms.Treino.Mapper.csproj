@@ -5,9 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pitang.Sms.Treino.Data\Pitang.Sms.Treino.Data.csproj" />
+    <PackageReference Include="AutoMapper" Version="9.0.0">
+      <NoWarn>true</NoWarn>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Pitang.Sms.Treino.Entities\Pitang.Sms.Treino.Entities.csproj" />
-    <ProjectReference Include="..\Pitang.Smsm.Treino.DTO\Pitang.Sms.Treino.DTO.csproj" />
+    <ProjectReference Include="..\Pitang.Smsm.Treino.DTO\Pitang.Smsm.Treino.DTO.csproj" />
   </ItemGroup>
 
 </Project>
