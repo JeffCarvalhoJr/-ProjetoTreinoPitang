@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitang.Sms.Treino", "Pitang.Sms.Treino\Pitang.Sms.Treino.csproj", "{FC0EDE33-57B4-4295-A527-3C8A4B632689}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{884660A2-66E1-41ED-9E78-EB6050EC475B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitang.Sms.Treino.Data", "Pitang.Sms.Treino.Data\Pitang.Sms.Treino.Data.csproj", "{6CD389E2-4179-41F2-9C7D-0A15536654D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitang.Sms.Treino.Entities", "Pitang.Sms.Treino.Entities\Pitang.Sms.Treino.Entities.csproj", "{A29B2CB8-98EF-40C0-A597-3A575107862C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitang.Sms.Treino.Services", "Pitang.Sms.Treino.Services\Pitang.Sms.Treino.Services.csproj", "{AAB24980-5F40-412C-8B9C-682C28C09B73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC0EDE33-57B4-4295-A527-3C8A4B632689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0EDE33-57B4-4295-A527-3C8A4B632689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0EDE33-57B4-4295-A527-3C8A4B632689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0EDE33-57B4-4295-A527-3C8A4B632689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD389E2-4179-41F2-9C7D-0A15536654D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD389E2-4179-41F2-9C7D-0A15536654D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD389E2-4179-41F2-9C7D-0A15536654D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD389E2-4179-41F2-9C7D-0A15536654D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29B2CB8-98EF-40C0-A597-3A575107862C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29B2CB8-98EF-40C0-A597-3A575107862C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29B2CB8-98EF-40C0-A597-3A575107862C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29B2CB8-98EF-40C0-A597-3A575107862C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB24980-5F40-412C-8B9C-682C28C09B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB24980-5F40-412C-8B9C-682C28C09B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB24980-5F40-412C-8B9C-682C28C09B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB24980-5F40-412C-8B9C-682C28C09B73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CD389E2-4179-41F2-9C7D-0A15536654D8} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
+		{A29B2CB8-98EF-40C0-A597-3A575107862C} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
+		{AAB24980-5F40-412C-8B9C-682C28C09B73} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDBD019B-4CA8-4E90-9760-EC3F4CC240EF}
+	EndGlobalSection
+EndGlobal
