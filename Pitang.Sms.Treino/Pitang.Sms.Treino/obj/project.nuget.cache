@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xZwO4HbMc2Egvj15HL6aKy20WIJhKx5ZgXdb+vee38tZSqEZ2HjAe9+wNZv2E3hdmDw9jkUSXCBSP80ssh/QSw==",
+  "dgSpecHash": "cKqXIboVMAMzmdaOuttxwla7nwytUeZVxjBWmbjg4mf9yoss4Mkms063KClY+9C8SrthEzSD7NDH5nKRLGDUKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino\\Pitang.Sms.Treino.csproj",
+  "projectFilePath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino\\Pitang.Sms.Treino.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jefca\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Jefca\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj": {}
+    "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj": {
+    "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj",
         "projectName": "Pitang.Sms.Treino.Services",
-        "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj",
+        "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj",
         "packagesPath": "C:\\Users\\Jefca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\obj\\",
+        "outputPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

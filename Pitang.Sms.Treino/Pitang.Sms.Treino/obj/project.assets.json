@@ -6563,11 +6563,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino\\Pitang.Sms.Treino.csproj",
+      "projectUniqueName": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino\\Pitang.Sms.Treino.csproj",
       "projectName": "Pitang.Sms.Treino",
-      "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino\\Pitang.Sms.Treino.csproj",
+      "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino\\Pitang.Sms.Treino.csproj",
       "packagesPath": "C:\\Users\\Jefca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino\\obj\\",
+      "outputPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6586,11 +6586,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Data\\Pitang.Sms.Treino.Data.csproj": {
-              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Data\\Pitang.Sms.Treino.Data.csproj"
+            "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Data\\Pitang.Sms.Treino.Data.csproj": {
+              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Data\\Pitang.Sms.Treino.Data.csproj"
             },
-            "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj": {
-              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj"
+            "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj": {
+              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj"
             }
           }
         }
@@ -6633,6 +6633,9 @@
           },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"

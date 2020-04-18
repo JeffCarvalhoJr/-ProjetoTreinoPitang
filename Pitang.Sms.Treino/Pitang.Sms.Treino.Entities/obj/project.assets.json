@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj",
       "projectName": "Pitang.Sms.Treino.Entities",
-      "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj",
+      "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj",
       "packagesPath": "C:\\Users\\Jefca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jefca\\source\\repos\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\obj\\",
+      "outputPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
