@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Pitang.Sms.Treino.Data\Pitang.Sms.Treino.Data.csproj" />
     <ProjectReference Include="..\Pitang.Sms.Treino.Entities\Pitang.Sms.Treino.Entities.csproj" />
+    <ProjectReference Include="..\Pitang.Sms.Treino.Mapper\Pitang.Sms.Treino.Mapper.csproj" />
     <ProjectReference Include="..\Pitang.Sms.Treino.Services\Pitang.Sms.Treino.Services.csproj" />
     <ProjectReference Include="..\Pitang.Smsm.Treino.DTO\Pitang.Sms.Treino.DTO.csproj" />
   </ItemGroup>

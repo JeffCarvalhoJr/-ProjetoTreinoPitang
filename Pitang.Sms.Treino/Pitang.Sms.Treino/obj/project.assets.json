@@ -2050,6 +2050,21 @@
           "bin/placeholder/Pitang.Sms.Treino.Entities.dll": {}
         }
       },
+      "Pitang.Sms.Treino.Mapper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "Pitang.Sms.Treino.DTO": "1.0.0",
+          "Pitang.Sms.Treino.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Pitang.Sms.Treino.Mapper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pitang.Sms.Treino.Mapper.dll": {}
+        }
+      },
       "Pitang.Sms.Treino.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2063,7 +2078,10 @@
         },
         "runtime": {
           "bin/placeholder/Pitang.Sms.Treino.Services.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
@@ -6709,6 +6727,11 @@
       "path": "../Pitang.Sms.Treino.Entities/Pitang.Sms.Treino.Entities.csproj",
       "msbuildProject": "../Pitang.Sms.Treino.Entities/Pitang.Sms.Treino.Entities.csproj"
     },
+    "Pitang.Sms.Treino.Mapper/1.0.0": {
+      "type": "project",
+      "path": "../Pitang.Sms.Treino.Mapper/Pitang.Sms.Treino.Mapper.csproj",
+      "msbuildProject": "../Pitang.Sms.Treino.Mapper/Pitang.Sms.Treino.Mapper.csproj"
+    },
     "Pitang.Sms.Treino.Services/1.0.0": {
       "type": "project",
       "path": "../Pitang.Sms.Treino.Services/Pitang.Sms.Treino.Services.csproj",
@@ -6725,6 +6748,7 @@
       "Pitang.Sms.Treino.DTO >= 1.0.0",
       "Pitang.Sms.Treino.Data >= 1.0.0",
       "Pitang.Sms.Treino.Entities >= 1.0.0",
+      "Pitang.Sms.Treino.Mapper >= 1.0.0",
       "Pitang.Sms.Treino.Services >= 1.0.0"
     ]
   },
@@ -6763,6 +6787,9 @@
             },
             "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj": {
               "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj"
+            },
+            "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Mapper\\Pitang.Sms.Treino.Mapper.csproj": {
+              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Mapper\\Pitang.Sms.Treino.Mapper.csproj"
             },
             "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj": {
               "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj"
@@ -6819,6 +6846,9 @@
           },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"

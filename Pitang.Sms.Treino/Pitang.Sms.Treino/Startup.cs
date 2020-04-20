@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Pitang.Sms.Treino.Data.DataContext;
+using Pitang.Sms.Treino.Mapper;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 
@@ -18,9 +18,10 @@ namespace Pitang.Sms.Treino
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Configuration = configuration;       
         }
 
         public IConfiguration Configuration { get; }

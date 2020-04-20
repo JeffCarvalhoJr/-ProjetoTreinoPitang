@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Pitang.Sms.Treino.Data.DataContext;
 using Pitang.Sms.Treino.Entities;
 using System.Threading.Tasks;
+using AutoMapper;
+using Pitang.Smsm.Treino.DTO;
+using Pitang.Sms.Treino.Mapper;
 
 namespace Pitang.Sms.Treino.Controller
 {
@@ -12,9 +15,11 @@ namespace Pitang.Sms.Treino.Controller
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly MapperConfig mapperConfig = new MapperConfig();
+
         [HttpGet]
         [Route("")]
-        public ActionResult<string> Get(
+        public ActionResult<string> GetCurrentUsers(
             [FromServices] DataContext context)
         {
             var users = context.Users;
@@ -24,12 +29,15 @@ namespace Pitang.Sms.Treino.Controller
 
         [HttpPost]
         [Route("")]
-        public async Task<ActionResult<UserModel>> Post(
+        public async Task<ActionResult<UserModelDTO>> PostNewUser(
             [FromServices] DataContext context, 
-            [FromBody] UserModel userModel)
+            [FromBody] UserModelDTO userModel)
         {
+            UserModel newUser = mapperConfig.iMapper.Map<UserModelDTO, UserModel>(userModel);
 
-            context.Users.Add(userModel);
+            Console.WriteLine(newUser.Username);
+
+            context.Users.Add(newUser);
             await context.SaveChangesAsync();
 
             return userModel;

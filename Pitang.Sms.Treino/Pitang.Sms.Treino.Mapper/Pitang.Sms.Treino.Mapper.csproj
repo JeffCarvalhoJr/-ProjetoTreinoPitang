@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pitang.Sms.Treino.Entities\Pitang.Sms.Treino.Entities.csproj" />
+    <ProjectReference Include="..\Pitang.Smsm.Treino.DTO\Pitang.Sms.Treino.DTO.csproj" />
+  </ItemGroup>
+
+</Project>

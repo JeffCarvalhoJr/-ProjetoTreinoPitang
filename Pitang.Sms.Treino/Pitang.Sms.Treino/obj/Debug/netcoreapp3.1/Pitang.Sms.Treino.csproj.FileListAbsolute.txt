@@ -232,3 +232,5 @@ C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.S
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Services.pdb
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.DTO.dll
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.DTO.pdb
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Mapper.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Mapper.pdb
