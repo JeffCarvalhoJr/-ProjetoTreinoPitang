@@ -14,6 +14,7 @@ namespace Pitang.Sms.Treino.Mapper
             config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<UserModelDTO, UserModel>();
+                cfg.CreateMap<UserModel, UserModelDTO>();
             });
 
             iMapper = config.CreateMapper();

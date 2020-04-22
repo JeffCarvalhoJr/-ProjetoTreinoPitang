@@ -13,6 +13,7 @@ using Pitang.Sms.Treino.Data.DataContext;
 using Pitang.Sms.Treino.Mapper;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using Pitang.Sms.Treino.Services.Users;
 
 namespace Pitang.Sms.Treino
 {
@@ -31,11 +32,12 @@ namespace Pitang.Sms.Treino
         {
             services.AddControllers();
 
-            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
-
+            //services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("Pitang.Sms.Treino")));
+            services.AddScoped<UserService>();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
-
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
