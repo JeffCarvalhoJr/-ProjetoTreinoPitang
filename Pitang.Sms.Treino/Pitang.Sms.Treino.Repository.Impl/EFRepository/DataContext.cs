@@ -12,5 +12,9 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
           : base(options) { }
 
         public DbSet<UserModel> Users { get; set; }
+        public DbSet<UserProfile> UsersProfiles { get; set; }
+        public DbSet<Contacts> UserContacts { get; set; }
+        public DbSet<Message> UserMessages { get; set; }
+        public DbSet<Story> UserStory { get; set; }
     }
 }

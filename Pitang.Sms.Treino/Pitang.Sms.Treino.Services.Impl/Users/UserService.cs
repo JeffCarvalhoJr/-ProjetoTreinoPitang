@@ -12,7 +12,7 @@ namespace Pitang.Sms.Treino.Services.Impl.Users
 {
     public class UserService : IUserService
     {
-        private IRepository<UserModel> usersRepository;
+        private readonly IRepository<UserModel> usersRepository;
 
         public UserService(IRepository<UserModel> usersRepository) {
             this.usersRepository = usersRepository;
@@ -35,7 +35,12 @@ namespace Pitang.Sms.Treino.Services.Impl.Users
 
         public async Task<IEnumerable<UserModel>> GetUsersAsync()
         {
-            throw new NotImplementedException();
-        }
+            if (usersRepository.FindAll().Count() == 0 || usersRepository.FindAll() == null)
+            {
+                return null;
+            }
+
+            return await usersRepository.FindAllAsync();
+        } 
     }
 }

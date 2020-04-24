@@ -24,13 +24,16 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
 
         public T Add(T entity)
         {
-            throw new NotImplementedException();
+            _entities.Add(entity);
+            _context.SaveChanges();
+
+            return _entities.Find(entity.Id);
         }
 
         public Task<T> AddAsync(T entity)
         {
             _entities.Add(entity);
-            _context.SaveChanges();
+            _context.SaveChangesAsync();
 
             return Task.FromResult(_entities.Find(entity.Id));
         }
@@ -47,10 +50,10 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
 
         public async Task<IEnumerable<T>> FindAllAsync()
         {
-            /* Arrumar isso aqui
-            return await _entities.AsAsyncEnumerable(); 
-            */
-            throw new NotImplementedException();
+            var query = _entities.AsQueryable();
+            query.Select(e => e);
+
+            return await query.ToListAsync();
         }
 
         public IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate)

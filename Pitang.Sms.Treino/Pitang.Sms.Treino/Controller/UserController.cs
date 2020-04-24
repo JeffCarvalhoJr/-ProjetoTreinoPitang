@@ -26,11 +26,11 @@ namespace Pitang.Sms.Treino.Controller
 
         [HttpGet]
         [Route("")]
-        public List<UserModelDTO> GetCurrentUsers()
+        public async Task<List<UserModelDTO>> GetCurrentUsers()
         {
             Console.WriteLine("Hello Get");//Debug
             List<UserModelDTO> currentUsers = new List<UserModelDTO>();
-            var userList = userService.GetUsers().ToList();
+           var userList = await userService.GetUsersAsync();
            foreach(var user in userList)
             {
                 currentUsers.Add(mapperConfig.iMapper.Map<UserModel, UserModelDTO>(user));
