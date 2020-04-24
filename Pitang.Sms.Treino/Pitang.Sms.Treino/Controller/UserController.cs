@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Pitang.Sms.Treino.Data.DataContext;
-using Pitang.Sms.Treino.Entities;
 using System.Threading.Tasks;
+using Pitang.Sms.Treino.Entities;
 using Pitang.Smsm.Treino.DTO;
 using Pitang.Sms.Treino.Mapper;
 using Pitang.Sms.Treino.Services.Users;
+using Pitang.Sms.Treino.Services.Impl.Users;
 
 namespace Pitang.Sms.Treino.Controller
 {
@@ -16,32 +17,39 @@ namespace Pitang.Sms.Treino.Controller
     public class UserController : ControllerBase
     {
         private readonly MapperConfig mapperConfig = new MapperConfig();
+        private readonly IUserService userService;
+
+        public UserController(IUserService userService)
+        {
+            this.userService = userService;
+        }
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<string>> GetCurrentUsers(
-            [FromServices] UserService userService,
-            [FromServices] DataContext context)
+        public List<UserModelDTO> GetCurrentUsers()
         {
             Console.WriteLine("Hello Get");//Debug
-            var users = await userService.GetUsers(context);
+            List<UserModelDTO> currentUsers = new List<UserModelDTO>();
+            var userList = userService.GetUsers().ToList();
+           foreach(var user in userList)
+            {
+                currentUsers.Add(mapperConfig.iMapper.Map<UserModel, UserModelDTO>(user));
+            }
 
-            return Ok(users);
+            return currentUsers;
         }
 
         [HttpPost]
         [Route("")]
         public async Task<ActionResult<UserModelDTO>> PostNewUser(
-            [FromServices] UserService userService,
-            [FromServices] DataContext context, 
-            [FromBody] UserModelDTO userModel)
+            [FromBody] UserModelDTO user)
         {
-            UserModel newUser = mapperConfig.iMapper.Map<UserModelDTO, UserModel>(userModel);
+            UserModel newUser = mapperConfig.iMapper.Map<UserModelDTO, UserModel>(user);
 
             Console.WriteLine(newUser.Username);
-            await userService.AddUser(context, newUser);
+            await userService.AddUser(newUser);
 
-            return userModel;
+            return user;
         }
     }
 }

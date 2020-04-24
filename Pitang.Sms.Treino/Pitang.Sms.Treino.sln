@@ -7,15 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitang.Sms.Treino", "Pitang
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{884660A2-66E1-41ED-9E78-EB6050EC475B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitang.Sms.Treino.Data", "Pitang.Sms.Treino.Data\Pitang.Sms.Treino.Data.csproj", "{6CD389E2-4179-41F2-9C7D-0A15536654D8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitang.Sms.Treino.Entities", "Pitang.Sms.Treino.Entities\Pitang.Sms.Treino.Entities.csproj", "{A29B2CB8-98EF-40C0-A597-3A575107862C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitang.Sms.Treino.Services", "Pitang.Sms.Treino.Services\Pitang.Sms.Treino.Services.csproj", "{AAB24980-5F40-412C-8B9C-682C28C09B73}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitang.Sms.Treino.DTO", "Pitang.Smsm.Treino.DTO\Pitang.Sms.Treino.DTO.csproj", "{05C0F987-317D-4C1C-B5EB-60FA055D1ADC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitang.Sms.Treino.Mapper", "Pitang.Sms.Treino.Mapper\Pitang.Sms.Treino.Mapper.csproj", "{CF6320DE-35B4-412B-AB48-593D7D11B49C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitang.Sms.Treino.Mapper", "Pitang.Sms.Treino.Mapper\Pitang.Sms.Treino.Mapper.csproj", "{CF6320DE-35B4-412B-AB48-593D7D11B49C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitang.Sms.Treino.Services.Impl", "Pitang.Sms.Treino.Services.Impl\Pitang.Sms.Treino.Services.Impl.csproj", "{631D7B4B-8941-4A28-B725-936C064CED6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitang.Sms.Treino.Repository", "Pitang.Sms.Treino.Repository\Pitang.Sms.Treino.Repository.csproj", "{442DA172-3C1E-4EEF-BD3E-2AE51651F1C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitang.Sms.Treino.Repository.Impl", "Pitang.Sms.Treino.Repository.Impl\Pitang.Sms.Treino.Repository.Impl.csproj", "{11DA0DD6-D040-457E-9BA5-2E73BF449E64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +31,6 @@ Global
 		{FC0EDE33-57B4-4295-A527-3C8A4B632689}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC0EDE33-57B4-4295-A527-3C8A4B632689}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC0EDE33-57B4-4295-A527-3C8A4B632689}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CD389E2-4179-41F2-9C7D-0A15536654D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CD389E2-4179-41F2-9C7D-0A15536654D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CD389E2-4179-41F2-9C7D-0A15536654D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CD389E2-4179-41F2-9C7D-0A15536654D8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A29B2CB8-98EF-40C0-A597-3A575107862C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A29B2CB8-98EF-40C0-A597-3A575107862C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A29B2CB8-98EF-40C0-A597-3A575107862C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,16 +47,30 @@ Global
 		{CF6320DE-35B4-412B-AB48-593D7D11B49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF6320DE-35B4-412B-AB48-593D7D11B49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF6320DE-35B4-412B-AB48-593D7D11B49C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{631D7B4B-8941-4A28-B725-936C064CED6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{631D7B4B-8941-4A28-B725-936C064CED6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{631D7B4B-8941-4A28-B725-936C064CED6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{631D7B4B-8941-4A28-B725-936C064CED6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{442DA172-3C1E-4EEF-BD3E-2AE51651F1C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{442DA172-3C1E-4EEF-BD3E-2AE51651F1C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442DA172-3C1E-4EEF-BD3E-2AE51651F1C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{442DA172-3C1E-4EEF-BD3E-2AE51651F1C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11DA0DD6-D040-457E-9BA5-2E73BF449E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DA0DD6-D040-457E-9BA5-2E73BF449E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11DA0DD6-D040-457E-9BA5-2E73BF449E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11DA0DD6-D040-457E-9BA5-2E73BF449E64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{6CD389E2-4179-41F2-9C7D-0A15536654D8} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
 		{A29B2CB8-98EF-40C0-A597-3A575107862C} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
 		{AAB24980-5F40-412C-8B9C-682C28C09B73} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
 		{05C0F987-317D-4C1C-B5EB-60FA055D1ADC} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
 		{CF6320DE-35B4-412B-AB48-593D7D11B49C} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
+		{631D7B4B-8941-4A28-B725-936C064CED6B} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
+		{442DA172-3C1E-4EEF-BD3E-2AE51651F1C0} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
+		{11DA0DD6-D040-457E-9BA5-2E73BF449E64} = {884660A2-66E1-41ED-9E78-EB6050EC475B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDBD019B-4CA8-4E90-9760-EC3F4CC240EF}

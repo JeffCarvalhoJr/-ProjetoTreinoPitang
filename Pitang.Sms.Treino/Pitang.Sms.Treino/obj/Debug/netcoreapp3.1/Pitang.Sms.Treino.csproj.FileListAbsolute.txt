@@ -210,9 +210,7 @@ C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.S
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.dll
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.dll
-C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Data.pdb
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Entities.pdb
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.csprojAssemblyReference.cache
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\obj\Debug\netcoreapp3.1\Pitang.Sms.Treino.csproj.CoreCompileInputs.cache
@@ -247,3 +245,12 @@ C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.S
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Repository.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Repository.Impl.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Services.Impl.dll
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Repository.Impl.pdb
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Services.Impl.pdb
+C:\Users\Jefca\source\repos\Pitang Treino\Projeto.SMS\Pitang.Sms.Treino\Pitang.Sms.Treino\bin\Debug\netcoreapp3.1\Pitang.Sms.Treino.Repository.pdb

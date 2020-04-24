@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Pitang.Sms.Treino.Data.DataContext;
-using Pitang.Sms.Treino.Mapper;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using Pitang.Sms.Treino.Services.Users;
+using Pitang.Sms.Treino.Repository.Impl.EFRepository;
+using Pitang.Sms.Treino.Services.Impl.Users;
+using Pitang.Sms.Treino.Repository.Contracts;
 
 namespace Pitang.Sms.Treino
 {
@@ -34,10 +34,10 @@ namespace Pitang.Sms.Treino
 
             //services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("Pitang.Sms.Treino")));
-            services.AddScoped<UserService>();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
-            
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

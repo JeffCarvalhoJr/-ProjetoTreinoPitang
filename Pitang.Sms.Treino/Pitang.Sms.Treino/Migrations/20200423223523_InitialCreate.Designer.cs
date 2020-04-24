@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Pitang.Sms.Treino.Data.DataContext;
+using Pitang.Sms.Treino.Repository.Impl.EFRepository;
 
 namespace Pitang.Sms.Treino.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200422154709_initialCreate")]
-    partial class initialCreate
+    [Migration("20200423223523_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
