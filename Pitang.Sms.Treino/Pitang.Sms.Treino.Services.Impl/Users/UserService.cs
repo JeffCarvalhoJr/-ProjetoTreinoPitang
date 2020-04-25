@@ -18,16 +18,21 @@ namespace Pitang.Sms.Treino.Services.Impl.Users
             this.usersRepository = usersRepository;
         }
        
-       public async Task<UserModel> AddUser(UserModel newUser)
+       public UserModel AddUser(UserModel newUser)
         {
-            return await usersRepository.AddAsync(newUser);
+            return usersRepository.Add(newUser);
+        }
+
+        public void DeleteUser(UserModel currentUser)
+        {
+            usersRepository.Delete(currentUser);
         }
 
         public IEnumerable<UserModel> GetUsers()
         {
             if (usersRepository.FindAll().Count() == 0 || usersRepository.FindAll() == null)
             {
-                return null;
+                return Enumerable.Empty<UserModel>();
             }
 
             return usersRepository.FindAll().ToList();
@@ -37,10 +42,15 @@ namespace Pitang.Sms.Treino.Services.Impl.Users
         {
             if (usersRepository.FindAll().Count() == 0 || usersRepository.FindAll() == null)
             {
-                return null;
+                return Enumerable.Empty<UserModel>();
             }
 
             return await usersRepository.FindAllAsync();
-        } 
+        }
+
+        public void UnDeleteUser(UserModel currentUser)
+        {
+            usersRepository.UnDelete(currentUser);
+        }
     }
 }

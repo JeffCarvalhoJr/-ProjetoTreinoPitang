@@ -12,8 +12,8 @@ namespace Pitang.Sms.Treino.Repository.Contracts
         T Add(T entity);
         Task<T> AddAsync(T entity);
         T Update(T entity);
-        void Delete(T id);
-        void UnDelete(T id);
+        void Delete(T entity);
+        void UnDelete(T entity);
         IEnumerable<T> FindAll();
         Task<IEnumerable<T>> FindAllAsync();
         IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);

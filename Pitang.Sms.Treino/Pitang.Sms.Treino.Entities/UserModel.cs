@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Pitang.Sms.Treino.Entities
@@ -24,9 +25,9 @@ namespace Pitang.Sms.Treino.Entities
         [MinLength(6, ErrorMessage = "Este campo deve conter entre 6 e 60 caracteres")]
         public string Password { get; set; }
 
+        public virtual UserProfile UserProfile { get; set; }
 
-        public short IsDeleted { get; set; }
-        
+        public virtual ICollection<Chat> ChatRooms { get; set; }
 
     }
 }

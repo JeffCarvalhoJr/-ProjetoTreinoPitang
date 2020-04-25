@@ -38,9 +38,10 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
             return Task.FromResult(_entities.Find(entity.Id));
         }
 
-        public void Delete(T id)
+        public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            _entities.Find(entity).IsDeleted = true;
+            _context.SaveChanges();
         }
 
         public IEnumerable<T> FindAll()
@@ -61,9 +62,10 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
             throw new NotImplementedException();
         }
 
-        public void UnDelete(T id)
+        public void UnDelete(T entity)
         {
-            throw new NotImplementedException();
+            _entities.Find(entity).IsDeleted = false;
+            _context.SaveChanges();
         }
 
         public T Update(T entity)

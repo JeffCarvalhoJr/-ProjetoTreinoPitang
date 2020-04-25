@@ -8,5 +8,7 @@ namespace Pitang.Sms.Treino.Entities
     {
         public int IdOwner { get; set; }
         public int IdTarget { get; set; }
+
+        public virtual ICollection<UserModel> ContactBook { get; set; }
     }
 }

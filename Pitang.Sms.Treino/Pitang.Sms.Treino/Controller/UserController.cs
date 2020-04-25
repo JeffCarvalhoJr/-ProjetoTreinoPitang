@@ -30,8 +30,8 @@ namespace Pitang.Sms.Treino.Controller
         {
             Console.WriteLine("Hello Get");//Debug
             List<UserModelDTO> currentUsers = new List<UserModelDTO>();
-           var userList = await userService.GetUsersAsync();
-           foreach(var user in userList)
+            var userList = await userService.GetUsersAsync();
+            foreach (var user in userList)
             {
                 currentUsers.Add(mapperConfig.iMapper.Map<UserModel, UserModelDTO>(user));
             }
@@ -41,15 +41,16 @@ namespace Pitang.Sms.Treino.Controller
 
         [HttpPost]
         [Route("")]
-        public async Task<ActionResult<UserModelDTO>> PostNewUser(
+        public ActionResult PostNewUser(
             [FromBody] UserModelDTO user)
         {
             UserModel newUser = mapperConfig.iMapper.Map<UserModelDTO, UserModel>(user);
+            
 
             Console.WriteLine(newUser.Username);
-            await userService.AddUser(newUser);
+            UserModelDTO newUserDTO = mapperConfig.iMapper.Map<UserModel, UserModelDTO>(userService.AddUser(newUser));
 
-            return user;
+            return Ok(newUserDTO);
         }
     }
 }

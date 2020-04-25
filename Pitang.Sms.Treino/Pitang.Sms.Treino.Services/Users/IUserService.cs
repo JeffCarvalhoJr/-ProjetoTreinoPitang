@@ -9,9 +9,11 @@ namespace Pitang.Sms.Treino.Services.Users
 {
     public interface IUserService
     {
-        public Task <UserModel> AddUser(UserModel newUser);
+        public UserModel AddUser(UserModel newUser);
         public IEnumerable<UserModel> GetUsers();
         public Task <IEnumerable<UserModel>> GetUsersAsync();
+        public void DeleteUser(UserModel currentUser);
+        public void UnDeleteUser(UserModel currentUser);
 
     }
 }

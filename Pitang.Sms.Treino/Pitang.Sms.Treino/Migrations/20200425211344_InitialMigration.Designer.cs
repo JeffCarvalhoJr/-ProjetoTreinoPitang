@@ -10,8 +10,8 @@ using Pitang.Sms.Treino.Repository.Impl.EFRepository;
 namespace Pitang.Sms.Treino.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200424195030_UpdatedEntities")]
-    partial class UpdatedEntities
+    [Migration("20200425211344_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,26 @@ namespace Pitang.Sms.Treino.Migrations
                 .HasAnnotation("ProductVersion", "3.1.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Pitang.Sms.Treino.Entities.Chat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("UserModelId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserModelId");
+
+                    b.ToTable("Chats");
+                });
 
             modelBuilder.Entity("Pitang.Sms.Treino.Entities.Contacts", b =>
                 {
@@ -34,6 +54,9 @@ namespace Pitang.Sms.Treino.Migrations
                     b.Property<int>("IdTarget")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.ToTable("UserContacts");
@@ -46,6 +69,9 @@ namespace Pitang.Sms.Treino.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("ChatId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -54,6 +80,9 @@ namespace Pitang.Sms.Treino.Migrations
 
                     b.Property<int>("IdTarget")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<short>("MessageStatusSource")
                         .HasColumnType("smallint");
@@ -65,6 +94,8 @@ namespace Pitang.Sms.Treino.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ChatId");
 
                     b.ToTable("UserMessages");
                 });
@@ -78,6 +109,9 @@ namespace Pitang.Sms.Treino.Migrations
 
                     b.Property<int>("IdOwner")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("PostDate")
                         .HasColumnType("datetime2");
@@ -100,13 +134,19 @@ namespace Pitang.Sms.Treino.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("ChatId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ContactsId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(60)")
                         .HasMaxLength(60);
 
-                    b.Property<short>("IsDeleted")
-                        .HasColumnType("smallint");
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -120,15 +160,20 @@ namespace Pitang.Sms.Treino.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ChatId");
+
+                    b.HasIndex("ContactsId");
+
                     b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Pitang.Sms.Treino.Entities.UserProfile", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(60)")
@@ -140,6 +185,40 @@ namespace Pitang.Sms.Treino.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UsersProfiles");
+                });
+
+            modelBuilder.Entity("Pitang.Sms.Treino.Entities.Chat", b =>
+                {
+                    b.HasOne("Pitang.Sms.Treino.Entities.UserModel", null)
+                        .WithMany("ChatRooms")
+                        .HasForeignKey("UserModelId");
+                });
+
+            modelBuilder.Entity("Pitang.Sms.Treino.Entities.Message", b =>
+                {
+                    b.HasOne("Pitang.Sms.Treino.Entities.Chat", null)
+                        .WithMany("ChatMessages")
+                        .HasForeignKey("ChatId");
+                });
+
+            modelBuilder.Entity("Pitang.Sms.Treino.Entities.UserModel", b =>
+                {
+                    b.HasOne("Pitang.Sms.Treino.Entities.Chat", null)
+                        .WithMany("Users")
+                        .HasForeignKey("ChatId");
+
+                    b.HasOne("Pitang.Sms.Treino.Entities.Contacts", null)
+                        .WithMany("ContactBook")
+                        .HasForeignKey("ContactsId");
+                });
+
+            modelBuilder.Entity("Pitang.Sms.Treino.Entities.UserProfile", b =>
+                {
+                    b.HasOne("Pitang.Sms.Treino.Entities.UserModel", "User")
+                        .WithOne("UserProfile")
+                        .HasForeignKey("Pitang.Sms.Treino.Entities.UserProfile", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

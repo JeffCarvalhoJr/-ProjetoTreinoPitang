@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pitang.Sms.Treino.Entities
 {
@@ -12,6 +13,9 @@ namespace Pitang.Sms.Treino.Entities
         public string Name { get; set; }
 
         public byte[] ProfileImage { get; set; }
+
+        [Required]
+        public virtual UserModel User { get; set; }
 
     }
 }
