@@ -37,7 +37,7 @@ namespace Pitang.Sms.Treino
             services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddTransient<IUserService, UserService>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

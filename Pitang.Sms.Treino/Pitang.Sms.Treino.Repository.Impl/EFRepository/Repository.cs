@@ -36,13 +36,7 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
             _context.SaveChangesAsync();
 
             return Task.FromResult(_entities.Find(entity.Id));
-        }
-
-        public void Delete(T entity)
-        {
-            _entities.Find(entity).IsDeleted = true;
-            _context.SaveChanges();
-        }
+        }      
 
         public IEnumerable<T> FindAll()
         {
@@ -59,18 +53,42 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
 
         public IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate)
         {
-            throw new NotImplementedException();
+            var query = _entities.AsQueryable();
+            query.Where(predicate);
+
+            return query.ToList();
         }
 
-        public void UnDelete(T entity)
+        public async Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> predicate)
         {
-            _entities.Find(entity).IsDeleted = false;
+            var query = _entities.AsQueryable();
+            query.Where(predicate);
+
+            return await query.ToListAsync();
+        }
+
+        public void Delete(int id)
+        {
+            /*
+            var deletedEntity = FindBy(e => e.Id == id).ToList()[0];
+            deletedEntity.IsDeleted = true;
+            _context.SaveChanges();
+            */
+            var deletedEntity = _entities.AsQueryable().SingleOrDefault(e => e.Id == id).IsDeleted = true;
+        }
+
+        public void UnDelete(int id)
+        {
+            var unDeletedEntity = FindBy(e => e.Id == id).ToList()[0];
+            _entities.Find(unDeletedEntity).IsDeleted = false;
             _context.SaveChanges();
         }
 
         public T Update(T entity)
         {
-            throw new NotImplementedException();
+            _entities.Attach(entity).State = EntityState.Modified;
+            _context.SaveChanges();
+            return entity;
         }
     }
 }

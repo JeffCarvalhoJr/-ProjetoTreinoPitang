@@ -52,5 +52,22 @@ namespace Pitang.Sms.Treino.Controller
 
             return Ok(newUserDTO);
         }
+
+        [HttpDelete]
+        [Route("{userId}")]
+        public void Delete(int userId)
+        {
+            userService.Delete(userId);
+        }
+
+        [HttpPut]
+        [Route("{usersId}/update")]
+        public UserModelDTO Update([FromBody] UserModelDTO user)
+        {
+
+            UserModel updatedUser = mapperConfig.iMapper.Map<UserModelDTO, UserModel>(user);
+            UserModelDTO updatedUserDTO = mapperConfig.iMapper.Map<UserModel, UserModelDTO>(userService.Update(updatedUser));
+            return updatedUserDTO;
+        }
     }
 }

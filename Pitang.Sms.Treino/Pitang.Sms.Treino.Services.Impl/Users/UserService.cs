@@ -14,18 +14,14 @@ namespace Pitang.Sms.Treino.Services.Impl.Users
     {
         private readonly IRepository<UserModel> usersRepository;
 
-        public UserService(IRepository<UserModel> usersRepository) {
+        public UserService(IRepository<UserModel> usersRepository)
+        {
             this.usersRepository = usersRepository;
         }
-       
-       public UserModel AddUser(UserModel newUser)
+
+        public UserModel AddUser(UserModel newUser)
         {
             return usersRepository.Add(newUser);
-        }
-
-        public void DeleteUser(UserModel currentUser)
-        {
-            usersRepository.Delete(currentUser);
         }
 
         public IEnumerable<UserModel> GetUsers()
@@ -35,7 +31,7 @@ namespace Pitang.Sms.Treino.Services.Impl.Users
                 return Enumerable.Empty<UserModel>();
             }
 
-            return usersRepository.FindAll().ToList();
+            return usersRepository.FindBy(e => e.IsDeleted == false);
         }
 
         public async Task<IEnumerable<UserModel>> GetUsersAsync()
@@ -48,9 +44,19 @@ namespace Pitang.Sms.Treino.Services.Impl.Users
             return await usersRepository.FindAllAsync();
         }
 
-        public void UnDeleteUser(UserModel currentUser)
+        public void Delete(int currentUserId)
         {
-            usersRepository.UnDelete(currentUser);
+            usersRepository.Delete(currentUserId);
+        }
+
+        public void UnDelete(int currentUserId)
+        {
+            usersRepository.UnDelete(currentUserId);
+        }
+
+        public UserModel Update(UserModel updatedUser)
+        {
+            return usersRepository.Update(updatedUser); ;
         }
     }
 }
