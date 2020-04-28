@@ -41,14 +41,13 @@ namespace Pitang.Sms.Treino.Controller
 
         [HttpPost]
         [Route("")]
-        public ActionResult PostNewUser(
+        public async Task<ActionResult> PostNewUser(
             [FromBody] UserModelDTO user)
         {
             UserModel newUser = mapperConfig.iMapper.Map<UserModelDTO, UserModel>(user);
-            
+            newUser = await userService.AddUserAsync(newUser);
 
-            Console.WriteLine(newUser.Username);
-            UserModelDTO newUserDTO = mapperConfig.iMapper.Map<UserModel, UserModelDTO>(userService.AddUser(newUser));
+            UserModelDTO newUserDTO = mapperConfig.iMapper.Map<UserModel, UserModelDTO>(newUser);
 
             return Ok(newUserDTO);
         }

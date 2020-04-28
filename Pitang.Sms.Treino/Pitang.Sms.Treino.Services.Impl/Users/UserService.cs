@@ -19,29 +19,19 @@ namespace Pitang.Sms.Treino.Services.Impl.Users
             this.usersRepository = usersRepository;
         }
 
-        public UserModel AddUser(UserModel newUser)
+        public async Task<UserModel> AddUserAsync(UserModel newUser)
         {
-            return usersRepository.Add(newUser);
+            return await usersRepository.AddAsync(newUser);
         }
-
-        public IEnumerable<UserModel> GetUsers()
-        {
-            if (usersRepository.FindAll().Count() == 0 || usersRepository.FindAll() == null)
-            {
-                return Enumerable.Empty<UserModel>();
-            }
-
-            return usersRepository.FindBy(e => e.IsDeleted == false);
-        }
-
+ 
         public async Task<IEnumerable<UserModel>> GetUsersAsync()
         {
-            if (usersRepository.FindAll().Count() == 0 || usersRepository.FindAll() == null)
+            if (usersRepository.FindAllAsync().Result.Count() == 0 || usersRepository.FindAllAsync().Result == null)
             {
                 return Enumerable.Empty<UserModel>();
             }
 
-            return await usersRepository.FindAllAsync();
+            return await usersRepository.FindByAsync(e => e.IsDeleted == false);
         }
 
         public void Delete(int currentUserId)

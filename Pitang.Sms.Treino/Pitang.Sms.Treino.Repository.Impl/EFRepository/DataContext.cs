@@ -26,7 +26,9 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
             .HasForeignKey<UserProfile>(b => b.Id);
 
             modelBuilder.Entity<UserModel>()
-                 .HasMany(b => b.ChatRooms);
+                 .HasMany(b => b.ChatRooms)
+                 .WithOne()
+                 .HasForeignKey(e => e.Id);
 
             modelBuilder.Entity<Chat>()
                 .HasMany(b => b.Users);

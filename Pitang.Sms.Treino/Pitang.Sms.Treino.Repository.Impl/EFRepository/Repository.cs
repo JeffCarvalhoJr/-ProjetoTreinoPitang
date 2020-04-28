@@ -22,65 +22,41 @@ namespace Pitang.Sms.Treino.Repository.Impl.EFRepository
             _entities = _context.Set<T>();
         }
 
-        public T Add(T entity)
+        public async Task<T> AddAsync(T entity)
         {
             _entities.Add(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
-            return _entities.Find(entity.Id);
-        }
-
-        public Task<T> AddAsync(T entity)
-        {
-            _entities.Add(entity);
-            _context.SaveChangesAsync();
-
-            return Task.FromResult(_entities.Find(entity.Id));
+            return await Task.FromResult(_entities.FindAsync(entity.Id).Result);
         }      
 
-        public IEnumerable<T> FindAll()
-        {
-            return _entities.AsEnumerable();
-        }
-
-        public async Task<IEnumerable<T>> FindAllAsync()
+        public async Task<IEnumerable<T>> FindAllAsync(bool getDeleted = false)
         {
             var query = _entities.AsQueryable();
-            query.Select(e => e);
+            query = query.Select(e => e);
 
             return await query.ToListAsync();
         }
 
-        public IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate)
+        public async Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> predicate, bool getDeleted = false)
         {
             var query = _entities.AsQueryable();
-            query.Where(predicate);
-
-            return query.ToList();
-        }
-
-        public async Task<IEnumerable<T>> FindByAsync(Expression<Func<T, bool>> predicate)
-        {
-            var query = _entities.AsQueryable();
-            query.Where(predicate);
+            query = query.Where(predicate);
 
             return await query.ToListAsync();
         }
 
         public void Delete(int id)
         {
-            /*
-            var deletedEntity = FindBy(e => e.Id == id).ToList()[0];
-            deletedEntity.IsDeleted = true;
+            var unDeletedEntity = FindByAsync(e => e.Id == id);
+            _entities.FindAsync(unDeletedEntity).Result.IsDeleted = true;
             _context.SaveChanges();
-            */
-            var deletedEntity = _entities.AsQueryable().SingleOrDefault(e => e.Id == id).IsDeleted = true;
         }
 
         public void UnDelete(int id)
         {
-            var unDeletedEntity = FindBy(e => e.Id == id).ToList()[0];
-            _entities.Find(unDeletedEntity).IsDeleted = false;
+            var unDeletedEntity = FindByAsync(e => e.Id == id);
+            _entities.FindAsync(unDeletedEntity).Result.IsDeleted = false;
             _context.SaveChanges();
         }
 
