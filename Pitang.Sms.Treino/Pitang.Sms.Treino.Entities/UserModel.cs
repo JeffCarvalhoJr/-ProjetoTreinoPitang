@@ -24,9 +24,9 @@ namespace Pitang.Sms.Treino.Entities
         [MaxLength(60, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
         [MinLength(6, ErrorMessage = "Este campo deve conter entre 6 e 60 caracteres")]
         public string Password { get; set; }
-
+        public virtual Contacts Contacts { get; set; }
+        public virtual Story Story { get; set; }
         public virtual UserProfile UserProfile { get; set; }
-
         public virtual ICollection<Chat> ChatRooms { get; set; }
 
     }

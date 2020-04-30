@@ -10,7 +10,7 @@ namespace Pitang.Sms.Treino.Entities
         [Required]
         public virtual ICollection<UserModel> Users { get; set; }
         
-        public ICollection<Message>ChatMessages { get; set; }
+        public ICollection<Message>Messages { get; set; }
 
 
     }

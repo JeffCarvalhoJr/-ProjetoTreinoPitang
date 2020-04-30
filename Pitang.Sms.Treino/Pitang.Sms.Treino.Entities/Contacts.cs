@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Pitang.Sms.Treino.Entities
 {
     public class Contacts : BaseEntity
     {
-        public int IdOwner { get; set; }
-        public int IdTarget { get; set; }
+        [Required]
+        public virtual UserModel Owner { get; set; }
 
         public virtual ICollection<UserModel> ContactBook { get; set; }
     }

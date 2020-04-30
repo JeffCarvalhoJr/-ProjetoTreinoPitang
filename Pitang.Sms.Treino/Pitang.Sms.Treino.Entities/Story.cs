@@ -7,10 +7,10 @@ namespace Pitang.Sms.Treino.Entities
 {
     public class Story : BaseEntity
     {
-        public string UserMessage { get; set; }
-
         [Required]
-        public int IdOwner { get; set; }
+        public string UserMessage { get; set; }
+        [Required]
+        public virtual UserModel Owner { get; set; }
         public DateTime PostDate { get; set; }
         public short Type { get; set; }
     }

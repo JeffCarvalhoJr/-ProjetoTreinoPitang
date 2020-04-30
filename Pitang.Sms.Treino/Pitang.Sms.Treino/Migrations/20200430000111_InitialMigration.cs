@@ -8,51 +8,30 @@ namespace Pitang.Sms.Treino.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "UserContacts",
+                name: "UsersProfiles",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    IdOwner = table.Column<int>(nullable: false),
-                    IdTarget = table.Column<int>(nullable: false)
+                    Name = table.Column<string>(maxLength: 60, nullable: true),
+                    ProfileImage = table.Column<byte[]>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserContacts", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserStory",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IsDeleted = table.Column<bool>(nullable: false),
-                    UserMessage = table.Column<string>(nullable: true),
-                    IdOwner = table.Column<int>(nullable: false),
-                    PostDate = table.Column<DateTime>(nullable: false),
-                    Type = table.Column<short>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_UserStory", x => x.Id);
+                    table.PrimaryKey("PK_UsersProfiles", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "UserMessages",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    IdSource = table.Column<int>(nullable: false),
-                    IdTarget = table.Column<int>(nullable: false),
                     Date = table.Column<DateTime>(nullable: false),
                     UserMessage = table.Column<string>(nullable: true),
                     MessageStatusSource = table.Column<short>(nullable: false),
-                    MessageStatusTarget = table.Column<short>(nullable: false),
-                    ChatId = table.Column<int>(nullable: true)
+                    MessageStatusTarget = table.Column<short>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -63,8 +42,7 @@ namespace Pitang.Sms.Treino.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
                     Username = table.Column<string>(maxLength: 60, nullable: false),
                     Email = table.Column<string>(maxLength: 60, nullable: false),
@@ -76,62 +54,69 @@ namespace Pitang.Sms.Treino.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Users_UserContacts_ContactsId",
-                        column: x => x.ContactsId,
-                        principalTable: "UserContacts",
+                        name: "FK_Users_UsersProfiles_Id",
+                        column: x => x.Id,
+                        principalTable: "UsersProfiles",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Chats",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IsDeleted = table.Column<bool>(nullable: false),
-                    UserModelId = table.Column<int>(nullable: true)
+                    Id = table.Column<int>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Chats", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Chats_Users_UserModelId",
-                        column: x => x.UserModelId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UsersProfiles",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false),
-                    IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 60, nullable: true),
-                    ProfileImage = table.Column<byte[]>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_UsersProfiles", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_UsersProfiles_Users_Id",
+                        name: "FK_Chats_Users_Id",
                         column: x => x.Id,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Chats_UserModelId",
-                table: "Chats",
-                column: "UserModelId");
+            migrationBuilder.CreateTable(
+                name: "UserContacts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserContacts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserContacts_Users_Id",
+                        column: x => x.Id,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_UserMessages_ChatId",
-                table: "UserMessages",
-                column: "ChatId");
+            migrationBuilder.CreateTable(
+                name: "UserStory",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    UserMessage = table.Column<string>(nullable: false),
+                    PostDate = table.Column<DateTime>(nullable: false),
+                    Type = table.Column<short>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserStory", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserStory_Users_Id",
+                        column: x => x.Id,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_ChatId",
@@ -144,12 +129,12 @@ namespace Pitang.Sms.Treino.Migrations
                 column: "ContactsId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_UserMessages_Chats_ChatId",
+                name: "FK_UserMessages_Chats_Id",
                 table: "UserMessages",
-                column: "ChatId",
+                column: "Id",
                 principalTable: "Chats",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Users_Chats_ChatId",
@@ -158,19 +143,28 @@ namespace Pitang.Sms.Treino.Migrations
                 principalTable: "Chats",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Users_UserContacts_ContactsId",
+                table: "Users",
+                column: "ContactsId",
+                principalTable: "UserContacts",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Chats_Users_UserModelId",
+                name: "FK_Chats_Users_Id",
                 table: "Chats");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_UserContacts_Users_Id",
+                table: "UserContacts");
 
             migrationBuilder.DropTable(
                 name: "UserMessages");
-
-            migrationBuilder.DropTable(
-                name: "UsersProfiles");
 
             migrationBuilder.DropTable(
                 name: "UserStory");
@@ -183,6 +177,9 @@ namespace Pitang.Sms.Treino.Migrations
 
             migrationBuilder.DropTable(
                 name: "UserContacts");
+
+            migrationBuilder.DropTable(
+                name: "UsersProfiles");
         }
     }
 }
