@@ -14,6 +14,7 @@ using Pitang.Sms.Treino.Services.Users;
 using Pitang.Sms.Treino.Repository.Impl.EFRepository;
 using Pitang.Sms.Treino.Services.Impl.Users;
 using Pitang.Sms.Treino.Repository.Contracts;
+using Pitang.Sms.Treino.Repository.Impl.Impl;
 
 namespace Pitang.Sms.Treino
 {
@@ -36,7 +37,10 @@ namespace Pitang.Sms.Treino
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("Pitang.Sms.Treino")));
             services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
+
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IUsersRepository), typeof(UsersRepository));
+
             services.AddScoped<IUserService, UserService>();
         }
 

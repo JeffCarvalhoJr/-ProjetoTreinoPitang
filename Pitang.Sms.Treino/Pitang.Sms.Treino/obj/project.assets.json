@@ -2622,13 +2622,24 @@
           "Pitang.Sms.Treino.Entities": "1.0.0",
           "Pitang.Sms.Treino.Repository": "1.0.0",
           "Pitang.Sms.Treino.Repository.Impl": "1.0.0",
-          "Pitang.Sms.Treino.Services": "1.0.0"
+          "Pitang.Sms.Treino.Services": "1.0.0",
+          "Utils": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Pitang.Sms.Treino.Services.Impl.dll": {}
         },
         "runtime": {
           "bin/placeholder/Pitang.Sms.Treino.Services.Impl.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utils.dll": {}
         }
       }
     }
@@ -8311,6 +8322,11 @@
       "type": "project",
       "path": "../Pitang.Sms.Treino.Services.Impl/Pitang.Sms.Treino.Services.Impl.csproj",
       "msbuildProject": "../Pitang.Sms.Treino.Services.Impl/Pitang.Sms.Treino.Services.Impl.csproj"
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "path": "../Utils/Utils.csproj",
+      "msbuildProject": "../Utils/Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {

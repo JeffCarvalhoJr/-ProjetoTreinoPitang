@@ -28,7 +28,6 @@ namespace Pitang.Sms.Treino.Controller
         [Route("")]
         public async Task<List<UserModelDTO>> GetCurrentUsers()
         {
-            Console.WriteLine("Hello Get");//Debug
             List<UserModelDTO> currentUsers = new List<UserModelDTO>();
             var userList = await userService.GetUsersAsync();
             foreach (var user in userList)
@@ -56,6 +55,7 @@ namespace Pitang.Sms.Treino.Controller
         [Route("{userId}")]
         public void Delete(int userId)
         {
+            //Não deve ser usado, usar chamada Update com deleção logica.
             userService.Delete(userId);
         }
 

@@ -9,6 +9,7 @@
     <ProjectReference Include="..\Pitang.Sms.Treino.Repository.Impl\Pitang.Sms.Treino.Repository.Impl.csproj" />
     <ProjectReference Include="..\Pitang.Sms.Treino.Repository\Pitang.Sms.Treino.Repository.csproj" />
     <ProjectReference Include="..\Pitang.Sms.Treino.Services\Pitang.Sms.Treino.Services.csproj" />
+    <ProjectReference Include="..\Utils\Utils.csproj" />
   </ItemGroup>
 
 </Project>

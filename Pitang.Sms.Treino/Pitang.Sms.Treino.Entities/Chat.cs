@@ -12,6 +12,5 @@ namespace Pitang.Sms.Treino.Entities
         
         public ICollection<Message>Messages { get; set; }
 
-
     }
 }
