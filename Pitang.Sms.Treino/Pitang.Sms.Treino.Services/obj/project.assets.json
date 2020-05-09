@@ -703,23 +703,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jefca\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\jfcj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj",
+      "projectUniqueName": "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj",
       "projectName": "Pitang.Sms.Treino.Services",
-      "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj",
-      "packagesPath": "C:\\Users\\Jefca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\obj\\",
+      "projectPath": "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\Pitang.Sms.Treino.Services.csproj",
+      "packagesPath": "C:\\Users\\jfcj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Services\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jefca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jfcj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -732,17 +728,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj": {
-              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj"
+            "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj": {
+              "projectPath": "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Entities\\Pitang.Sms.Treino.Entities.csproj"
             },
-            "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Repository.Impl\\Pitang.Sms.Treino.Repository.Impl.csproj": {
-              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Repository.Impl\\Pitang.Sms.Treino.Repository.Impl.csproj"
+            "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Repository.Impl\\Pitang.Sms.Treino.Repository.Impl.csproj": {
+              "projectPath": "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Repository.Impl\\Pitang.Sms.Treino.Repository.Impl.csproj"
             },
-            "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Repository\\Pitang.Sms.Treino.Repository.csproj": {
-              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Repository\\Pitang.Sms.Treino.Repository.csproj"
+            "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Repository\\Pitang.Sms.Treino.Repository.csproj": {
+              "projectPath": "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Sms.Treino.Repository\\Pitang.Sms.Treino.Repository.csproj"
             },
-            "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Smsm.Treino.DTO\\Pitang.Sms.Treino.DTO.csproj": {
-              "projectPath": "C:\\Users\\Jefca\\source\\repos\\Pitang Treino\\Projeto.SMS\\Pitang.Sms.Treino\\Pitang.Smsm.Treino.DTO\\Pitang.Sms.Treino.DTO.csproj"
+            "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Smsm.Treino.DTO\\Pitang.Sms.Treino.DTO.csproj": {
+              "projectPath": "C:\\Users\\jfcj\\Documents\\ProjetoTreinoPitang\\Pitang.Sms.Treino\\Pitang.Smsm.Treino.DTO\\Pitang.Sms.Treino.DTO.csproj"
             }
           }
         }
